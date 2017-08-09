@@ -1,8 +1,12 @@
-1. Open your Wind Waker US Version (MOD NOT COMPATIBLE WITH EUROPEAN, JAPANESE, OR KIOSK DEMO VERSIONS OF WIND WAKER) game config
-  INI file like you would to add any other Gecko code
-  * In Windows, the file is located at `Documents/Dolphin Emulator/GameSettings/GZLE01.ini`
-  * If the file does not exist because you have never emulated Wind Waker in Dolphin, you can simply create the file yourself.
+1. Open your Wind Waker US Version (this hack is not compatible with any other region of the game) game config INI file like
+   you would to add any other Gecko code
+    * In Windows, the file is located at `Documents/Dolphin Emulator/GameSettings/GZLE01.ini`
+    * If the file does not exist because you have never emulated Wind Waker in Dolphin, you can simply create the file yourself.
 2. Under the `[Gecko]` tag in the INI (add the tag if it doesn't already exist), add the Gecko codes listed below.
+
+<details>
+  <summary>Gecko Codes (Click to Expand)</summary><p>
+  
 ```
 $FPSHack_00_SetParam_FramerateFactor__60
 057F0008 00000002
@@ -300,10 +304,14 @@ $FPSHack_39_SlowOceanWaves
 043906CC 000001A4
 043906E4 00000168
 ```
+
+</p></details>
+
+
 3. Right click Wind Waker in Dolphin's game list and choose `Properties`.
 4. Go to the `Gecko Codes` tab.
 5. Tick the enable checkboxes beside ALL codes that begin with `FPSHack_` that you added to the INI in step 2.
-  * **NOTE**: You *MUST* disable *ANY* other ASM-injection Gecko codes you may have in your cheat list because *the FPS hack uses up all of the memory space in which Gecko stores the actual injected code*!
+    * **NOTE**: You *MUST* disable *ANY* other ASM-injection Gecko codes you may have in your cheat list because *the FPS hack uses up all of the memory space in which Gecko stores the actual injected code*!
 6. In the main Dolphin window, go to the `Options` tab and click on `Configuration` (or click the `Config` button on the toolbar) to open Dolphin's main configuration Window.
 7. In the leftmost tab, `General`, within the `Basic Settings` section, make sure the checkbox for `Enable Cheats` is ticked.
 8. In the `Advanced` tab of Dolphin's Configuration window, within the `CPU Options` section, tick the checkbox for 
@@ -314,7 +322,7 @@ $FPSHack_39_SlowOceanWaves
 
 
 **Note**: Some later versions of Dolphin may have a non-functioning CPU clock override. The only one I tested was `5.0-4792`, 
-in which the CPU clock override had absolutely no effect. I checked the revision which I had downloaded a few weeks before, which was `5.0-3679`, and I can confirm that the CPU clock override and framerate hack working properly in that revision.
-So if the game is running in super slowmo, try using **Dolphin 5.0-3679** or older.
+in which the CPU clock override had absolutely no effect. I checked the revision which I had downloaded a few weeks before, which was `5.0-3679`, and I can confirm that the CPU clock override and framerate hack work properly in that revision.
+With that said, if the game is running in super slowmo, try using **Dolphin 5.0-3679** or older.
 
 Be sure to check the `README.md` file for information about some of the game-breaking bugs this hack introduces.
