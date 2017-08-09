@@ -1,0 +1,51 @@
+pc leaf 8003dcf8
+
+	fopKy 8002a4a4
+	dKy execute 801948b4
+	
+	
+	
+daBg Draw 800d8db8
+
+
+
+particle calculate 8025f2f4
+
+dScnPly Execute 80234fd0
+
+dPa control calc3d 8007d094
+
+
+
+cLib addCalc 802528e4
+
+
+dMsg Execute 80214560
+	stwu sp, -0x00C0 (sp)
+	
+fopMsg Execute 8002a6b0
+    stwu sp, -0x0010 (sp)
+	
+
+
+Half params:
+C2XXXXXX 00000004
+3E20817F C2310004
+EC210472 EC420472
+EC630472 VVVVVVVV
+60000000 00000000
+
+Update LowHz:
+C2------ 00000005
+3E20817F 82310000
+2C110000 4182000C
+-------- 48000008
+4E800020 60000000
+60000000 00000000
+
+
+	802528e4: cLib addCalc (new value, step, error, max error)
+	802529e8: cLib addCalc0 (mult, error?) 
+	802529a4: cLib addCalc2 (target, curveMult, error?)
+	80252a20: cLib addCalcPos (cXyz*, cXyz const&, float step, float error?, float maxError?)
+	80252c5c: cLib addCalcPosXZ (cXyz, cXyz const& destination?, float step, float error?, float maxError?)

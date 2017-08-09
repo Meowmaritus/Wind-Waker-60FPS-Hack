@@ -1,0 +1,316 @@
+1. Open your Wind Waker US Version (MOD NOT COMPATIBLE WITH EUROPEAN, JAPANESE, OR KIOSK DEMO VERSIONS OF WIND WAKER) GameConfig *.INI file like you would to add any other Gecko code
+  * In Windows, the file is located at `Documents/Dolphin Emulator/GameSettings/GZLE01.ini`
+  * If the file does not exist because you have never emulated Wind Waker in Dolphin, you can simply create the file yourself.
+2. Under the `[Gecko]` tag in the INI (add the tag if it doesn't already exist), add the Gecko codes listed below.
+    $FPSHack_00_SetParam_FramerateFactor__60
+    057F0008 00000002
+    $FPSHack_01_MainUpdate
+    C2006410 00000022
+    3C60817F 91430010
+    91630014 91830018
+    91A3001C D9430020
+    D9630028 7D4802A6
+    9143002C 7D4902A6
+    91430030 3D40803F
+    614A6854 814A0000
+    81630008 7D8A5B96
+    7D8C59D6 7D8C5050
+    39A00000 2C0C0000
+    40820008 39A00001
+    91A30000 3D804330
+    91830030 39800000
+    91830034 C9630030
+    3D804330 91830030
+    91630034 C9430030
+    FD4A5828 3D803F80
+    91830030 C1630030
+    ED4B5024 D1430004
+    3D800014 618C9970
+    7D6C5B96 3D80804C
+    618C8D44 916C0000
+    81830050 280C0000
+    41820008 398CFFFF
+    91830050 8183000C
+    2C0C0000 41820014
+    3D80817F 618C0054
+    7D8903A6 4E800421
+    81430010 81630014
+    81830018 81A3001C
+    C9430020 C9630028
+    8143002C 7D4803A6
+    81430030 7D4903A6
+    806D8774 00000000
+    $FPSHack_02_SlowAnimations
+    C22EFBBC 00000006
+    3E20817F C2310004
+    8251000C 7C12D000
+    41820010 82510050
+    2C120000 40820008
+    EC000472 EC01002A
+    60000000 00000000
+    $FPSHack_03_SlowAllLinkVelocity
+    C212207C 0000000B
+    3E20817F C2310004
+    C25F0220 C27F01F8
+    EE739028 EE520472
+    EE73902A D27F01F8
+    C25F0224 C27F01FC
+    EE739028 EE520472
+    EE73902A D27F01FC
+    C25F0228 C27F0200
+    EE739028 EE520472
+    EE73902A D27F0200
+    C01F0220 00000000
+    $FPSHack_04_SlowLinkGravity
+    C21094BC 00000003
+    C01E0258 3E20817F
+    C2310004 EC000472
+    60000000 00000000
+    $FPSHack_05_SlowActorMovements
+    C20251A0 0000001A
+    3E20817F C2310004
+    82310050 C02301F8
+    C0030220 28110000
+    40820008 EC000472
+    EC01002A D00301F8
+    C02301FC C0030224
+    28110000 40820008
+    EC000472 EC01002A
+    D00301FC C0230200
+    C0030228 28110000
+    40820008 28110000
+    40820008 EC000472
+    EC01002A D0030200
+    28040000 4D820020
+    C02301F8 C0040000
+    28110000 40820008
+    EC000472 EC01002A
+    D00301F8 C02301FC
+    C0040004 28110000
+    40820008 EC000472
+    EC01002A D00301FC
+    C0230200 C0040008
+    28110000 40820008
+    EC000472 EC01002A
+    D0030200 4E800020
+    60000000 00000000
+    $FPSHack_06_SlowWindWakerTempo
+    C214E438 00000003
+    C042A404 3E20817F
+    C2310004 FC420472
+    60000000 00000000
+    $FPSHack_07_STControl_CheckTrigger_LowHz
+    C2058340 00000004
+    3E20817F 82310000
+    2C110001 41820008
+    4E800020 9421FFE0
+    60000000 00000000
+    $FPSHack_08_STControl_CheckUpTrigger_LowHz
+    C20586A8 00000004
+    3E20817F 82310000
+    2C110001 4182000C
+    38600000 4E800020
+    A8030010 00000000
+    $FPSHack_09_STControl_CheckDownTrigger_LowHz
+    C2058714 00000004
+    3E20817F 82310000
+    2C110001 4182000C
+    38600000 4E800020
+    A8030010 00000000
+    $FPSHack_10_STControl_CheckLeftTrigger_LowHz
+    C20585D0 00000004
+    3E20817F 82310000
+    2C110001 4182000C
+    38600000 4E800020
+    A803000E 00000000
+    $FPSHack_11_STControl_CheckRightTrigger_LowHz
+    C205863C 00000004
+    3E20817F 82310000
+    2C110001 4182000C
+    38600000 4E800020
+    A803000E 00000000
+    $FPSHack_13_CutsceneTicker_LowHz
+    C206B15C 00000007
+    3E20817F 82310000
+    2C110001 40820024
+    3E208027 62315560
+    7E6902A6 7E2903A6
+    7E4802A6 4E800421
+    7E4803A6 7E6903A6
+    60000000 00000000
+    $FPSHack_16_SlowJ3DFrameCtrl_CheckPass
+    C22EF614 00000003
+    3E20817F C2310004
+    EC000472 EC60102A
+    60000000 00000000
+    $FPSHack_17_SlowLinkSimpleAnmPlay
+    C21287F4 00000003
+    3E20817F C2310004
+    EC210472 EC41002A
+    60000000 00000000
+    $FPSHack_18_HalfCameraRotationX
+    C2178CB4 00000004
+    3E20817F D2310010
+    C2310004 EC000472
+    C2310010 EC01002A
+    60000000 00000000
+    $FPSHack_19_HalfCameraRotationY
+    C2179238 00000004
+    3E20817F D2310010
+    C2310004 EC000472
+    C2310010 EC61002A
+    60000000 00000000
+    $FPSHack_20_HalfCam1PRotationSpeed
+    C217056C 00000003
+    3E20817F C2310004
+    EFBD0472 57C0063F
+    60000000 00000000
+    $FPSHack_21_HalfCameraZoom
+    C217889C 00000003
+    3E20817F C2310004
+    EC000472 D00102D8
+    60000000 00000000
+    $FPSHack_22_UpdateLinkIdleAnimation_LowHz
+    C21133A0 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    3803FFFF 48000008
+    7C601B78 60000000
+    60000000 00000000
+    $FPSHack_23_HalfSomeItemValueIDK
+    C20F57FC 00000003
+    C022A1AC 3E20817F
+    C2310004 EC210472
+    60000000 00000000
+    $FPSHack_24_UpdateBombTimer_LowHz
+    C20D9F68 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    3803FFFF 48000008
+    7C601B78 60000000
+    60000000 00000000
+    $FPSHack_25_SlowBoomerangVelocity
+    C20E1FE4 00000003
+    3E20817F C2310004
+    C0029CA4 EC000472
+    60000000 00000000
+    $FPSHack_26_SlowHookShotOut
+    C20F1DE0 00000003
+    3E20817F C2310004
+    C022A100 EC210472
+    60000000 00000000
+    $FPSHack_27_SlowHookShotIn
+    C20F2620 00000003
+    3E20817F C2310004
+    C002A118 EC000472
+    60000000 00000000
+    $FPSHack_28_SlowHookShotReel
+    C20F23F8 00000003
+    3E20817F C2310004
+    EC200824 EC210472
+    60000000 00000000
+    $FPSHack_29_UpdateBreathMeter_LowHz
+    C2201CE8 00000004
+    3E20817F 82310000
+    2C110000 4182000C
+    3803FFFF 48000008
+    7C601B78 00000000
+    $FPSHack_30_UpdateParticles_LowHz
+    C207D094 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    9421FFF0 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_30_DoAddCalc_LowHz
+    C22528e4 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    c0a30000 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_31_DoAddCalc0_LowHz
+    C22529e8 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    c0030000 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_32_DoAddCalc2_LowHz
+    C22529a4 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    c0030000 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_33_DoAddCalcPos_LowHz
+    C2252a20 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    9421ff90 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_34_DoAddCalcPos2_LowHz
+    C2252ee0 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    9421ff90 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_35_DoAddCalcPosXZ_LowHz
+    C2252c5c 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    9421ff60 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_36_DoAddCalcPosXZ2_LowHz
+    C2253038 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    9421ff90 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_37_DoAddCalcAngleS_LowHz
+    C22531a8 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    a9030000 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_38_DoAddCalcAngleS2_LowHz
+    C2253270 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    a8e30000 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_39_DoAddCalcAngleL_LowHz
+    C22532c4 00000005
+    3E20817F 82310000
+    2C110000 4182000C
+    81030000 48000008
+    4E800020 60000000
+    60000000 00000000
+    $FPSHack_39_SlowOceanWaves
+    0439069C 00000190
+    043906B4 0000017C
+    043906CC 000001A4
+    043906E4 00000168
+3. Right click Wind Waker in Dolphin's game list and choose `Properties`.
+4. Go to the `Gecko Codes` tab.
+5. Tick the enable checkboxes beside ALL codes that begin with `FPSHack_` that you added to the INI in step 2.
+  * **NOTE**: You *MUST* disable *ANY* other ASM-injection Gecko codes you may have in your cheat list because *the FPS hack uses up all of the memory space in which Gecko uses to store injected code*!
+6. In the main Dolphin window, go to the `Options` tab and click on `Configuration` (or click the `Config` button on the toolbar) to open Dolphin's main configuration Window.
+7. In the leftmost tab, `General`, within the "Basic Settings" section, make sure the checkbox for "Enable Cheats" is ticked.
+8. In the `Advanced` tab of Dolphin's Configuration window, within the `CPU Options` section, tick the checkbox for `Enable CPU Clock Override` and drag the slider to the right until the value says `200 % (972 MHz)`
+  * This causes the virtual GameCube CPU in Dolphin's code to execute instructions at double the speed that an actual GameCube unit in real life could process them. *The CPU clock override is REQUIRED for the game to actually maintain 60 FPS*. Because of this, ***the 60 FPS hack is significantly harder to emulate at full speed than the unmodified game***!
+
+
+**Note**: Some later versions of Dolphin may have a non-functioning CPU clock override. The only one I tested was `5.0-4792`, in which the CPU clock override had absolutely no effect.
+I checked the revision which I had downloaded a few weeks before the aforementioned build, `5.0-3679`, and I can confirm that the CPU clock override and framerate hack working properly in that revision.
+So if the game is running in super slowmo, try using that version.
+
+
+
+Be sure to check the `README.md` file for information about some of the game-breaking bugs this hack introduces.

@@ -1,0 +1,9 @@
+Camera stuff:
+    80170978 after loading config values?
+
+Parameters:
+80359610 First Person Lerp
+80359624 First Person FOV
+80359614 Stick Rotation Speed Mult
+
+80356d70 Free Cam FOV

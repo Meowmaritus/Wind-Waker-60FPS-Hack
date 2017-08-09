@@ -1,0 +1,95 @@
+#pragma gecko insert 801094BC SlowGravity
+
+    ####ORIGINAL####
+    lfs	f0, 0x0258 (r30)    #[Link's Gravity Acceleration] --> f0
+    ################
+    lis r17, 0x817F
+    lfs f17, 0x0004 (r17)   #Load FloatSlowdown
+
+    fmuls f0, f0, f17       #Multiply f0 by FloatSlowdown
+
+    #([Link's Y-Velocity] + f0) --> [Link's Pending Y-Velocity]
+
+    /*
+        The reason this works properly is because we don't ever overwrite
+        the actual value of [Link's Gravity Acceleration]; we just change
+        The amount by which it modifies [Link's Pending Y-Velocity]. The reason
+        this matters is because in different parts of Link's various update
+        functions, some values are compared against the actual value of
+        [Link's Gravity Acceleration] or use it as a reference point,
+        so we can't mess with it. The previous implementation of modding
+        the actual stored value caused Link's vertical velocity while
+        jumping to mess up due to using the stored value as a reference point
+        and it caused Link to go to the falling state too soon after doing a
+        hop over a short ledge due to comparing Link's vertical velocity
+        to the stored [Link's Gravity Acceleration] value.
+    */
+
+#pragma gecko insert 8012207C SlowAllVelocity
+
+    lis r17, 0x817F
+    lfs f17, 0x0004 (r17)   #Load FloatSlowdown
+
+    #[Link's Pending Velocity] addresses = X:(r31|0x0220), Y:(r31|0x0224), Z:(r31|0x0228)
+    #[Link's Pending Position] addresses = X:(r31|0x01F8), Y:(r31|0x01FC), Z:(r31|0x0120)
+
+    ##X-Axis##
+    lfs f18, 0x0220 (r31)   #Load [Link's Pending Velocity]
+    lfs f19, 0x01F8 (r31)   #Load [Link's Pending Position]
+    fsubs f19, f19, f18     #Subtract [Link's Pending Velocity] from [Link's Pending Position] (which has already had [Link's Pending Velocity] added to it)
+    fmuls f18, f18, f17     #Slow that velocity by FloatSlowdown
+    fadds f19, f19, f18     #Add the slowed velocity to [Link's Pending Position]
+    stfs f19, 0x01F8 (r31)  #Overwrite [Link's Pending Position] but don't modify the original [Link's Pending Velocity] value.
+
+    ##Y-Axis##
+    lfs f18, 0x0224 (r31)   #Load [Link's Pending Velocity]
+    lfs f19, 0x01FC (r31)   #Load [Link's Pending Position]
+    fsubs f19, f19, f18     #Subtract [Link's Pending Velocity] from [Link's Pending Position] (which has already had [Link's Pending Velocity] added to it)
+    fmuls f18, f18, f17     #Slow that velocity by FloatSlowdown
+    fadds f19, f19, f18     #Add the slowed velocity to [Link's Pending Position]
+    stfs f19, 0x01FC (r31)  #Overwrite [Link's Pending Position] but don't modify the original [Link's Pending Velocity] value.
+
+    ##Z-Axis##
+    lfs f18, 0x0228 (r31)   #Load [Link's Pending Velocity]
+    lfs f19, 0x0200 (r31)   #Load [Link's Pending Position]
+    fsubs f19, f19, f18     #Subtract [Link's Pending Velocity] from [Link's Pending Position] (which has already had [Link's Pending Velocity] added to it)
+    fmuls f18, f18, f17     #Slow that velocity by FloatSlowdown
+    fadds f19, f19, f18     #Add the slowed velocity to [Link's Pending Position]
+    stfs f19, 0x0200 (r31)  #Overwrite [Link's Pending Position] but don't modify the original [Link's Pending Velocity] value.
+
+    ####ORIGINAL####
+    lfs f0, 0x0220 (r31)
+    ################
+
+    #[Link's Pending Velocity] -->--> [Link's New Velocity]
+    #[Link's Pending Position] -->--> [Link's New Position]
+
+
+
+
+
+
+
+
+
+
+
+$FPSHack_Link::SlowGravity
+C21094BC 00000003
+C01E0258 3E20817F
+C2310004 EC000472
+60000000 00000000
+
+$FPSHack_Link::SlowAllVelocity
+C212207C 0000000B
+3E20817F C2310004
+C25F0220 C27F01F8
+EE739028 EE520472
+EE73902A D27F01F8
+C25F0224 C27F01FC
+EE739028 EE520472
+EE73902A D27F01FC
+C25F0228 C27F0200
+EE739028 EE520472
+EE73902A D27F0200
+C01F0220 00000000
