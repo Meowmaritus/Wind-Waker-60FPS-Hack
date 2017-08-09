@@ -3,9 +3,10 @@
     * In Windows, the file is located at `Documents/Dolphin Emulator/GameSettings/GZLE01.ini`
     * If the file does not exist because you have never emulated Wind Waker in Dolphin, you can simply create the file yourself.
 2. Under the `[Gecko]` tag in the INI (add the tag if it doesn't already exist), add the Gecko codes listed below.
-
+---
+#### Gecko Codes:
 <details>
-  <summary>Gecko Codes (Click to Expand)</summary><p>
+  <summary>(Click to Expand)</summary><p>
   
 ```
 $FPSHack_00_SetParam_FramerateFactor__60
@@ -307,7 +308,7 @@ $FPSHack_39_SlowOceanWaves
 
 </p></details>
 
-
+---  
 3. Right click Wind Waker in Dolphin's game list and choose `Properties`.
 4. Go to the `Gecko Codes` tab.
 5. Tick the enable checkboxes beside ALL codes that begin with `FPSHack_` that you added to the INI in step 2.
