@@ -14,7 +14,7 @@ Downloading savegame files which are at various points in the game is very helpf
     * Note that the attack animations themselves play at correct speeds etc; the enemies are just exactly twice as aggressive.
   * Many timers are elapsed at double speed:
     * This causes ***another game-breaking softlock*** in the Earth-temple reminiscent portion of Ganon's Castle before the rematch with Jalhalla (and probably also in the actual Earth Temple), where you must turn a slime to stone and use it to keep a switch pressed, which keeps the path to the boss open. The slime will *always* break out of the stone form before Link has enough time to get through.
-* ***Game-breaking softlock***: Game freezes on a blank screen upon entering Molgera's boss room (this includes the one in Ganon's castle).
+* ***Game-breaking softlock***: Game freezes on a blank screen upon entering Molgera's boss room (this includes the one in Ganon's castle). Note: even when forcing entities to only update at 30 Hz to get past the crash, the entire boss arena disappears each frame its not updated, causing a seizure-inducing flickery mess. Also it lags because fuck you
 
 
 ## Included Files
